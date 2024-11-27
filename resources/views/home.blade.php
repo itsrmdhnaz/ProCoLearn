@@ -10,100 +10,232 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
-<body>
-    <div class="flex justify-center h-screen">
-        <aside class="flex flex-col justify-between bg-red-500 mt-4 mb-4 rounded-r-lg pr-6 sticky top-0">
-            <p>bisa</p>
-            <nav>
-                <p>tidak</p>
-                <p>tidak</p>
-                <p>tidak</p>
-                <p>tidak</p>
-                <p>tidak</p>
-            </nav>
-            <p>bisa</p>
-        </aside>
-        <main class="flex-grow max-w-[90rem] my-4">
-            <p class="bg-slate-300 w-10 h-10 m-auto sticky top-0">bisa</p>
-            <p class="m-auto">ini bisa di scroll Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta magnam
-                repellendus quaerat voluptates doloremque vel voluptatem ut maiores beatae. Natus, voluptatibus magnam.
-                Neque, ea eos voluptatum ullam dignissimos eaque! Reiciendis, aliquam molestias! Laborum hic, cupiditate
-                incidunt illo minus ut ipsa. Dignissimos libero, dolore repellat vitae necessitatibus consectetur, nam
-                sequi id ipsum recusandae laboriosam? Enim, perferendis? Sunt nobis, quas dolorem soluta accusamus
-                similique a, deleniti deserunt voluptate iusto dolores blanditiis. Nobis iste inventore itaque ab eum,
-                suscipit ratione vitae sapiente nam voluptatibus praesentium nesciunt soluta odio aperiam consequuntur!
-                Nesciunt magnam laudantium distinctio? Nihil odit itaque aspernatur impedit magni earum repellendus
-                ducimus? Labore officia non esse hic nulla nam atque incidunt maxime quas suscipit, dignissimos,
-                similique dicta quaerat reprehenderit doloremque, distinctio iusto provident quam animi rerum iure?
-                Similique blanditiis laudantium earum nesciunt impedit quaerat atque in dolores tenetur asperiores unde
-                obcaecati voluptatum provident adipisci rem nam possimus aliquam fugit soluta eveniet illum ea
-                assumenda, voluptas autem? Veritatis iusto sed distinctio est similique accusantium adipisci aut
-                reiciendis illum, illo obcaecati provident! Aspernatur fuga quos, quidem culpa quasi labore. Officiis,
-                quas placeat! Quasi nihil tenetur exercitationem perferendis! Deserunt necessitatibus blanditiis tempora
-                assumenda illo ipsum eius, dolore sunt libero voluptatem, magni maiores labore placeat quidem,
-                laboriosam fugiat officia cum ducimus. Et, commodi modi impedit, delectus quo dolore maiores voluptate
-                eligendi sit at odit facere eveniet dolorum provident eius? Porro magni labore maiores consectetur
-                cumque veniam quia quam natus voluptatibus cum. Debitis corrupti id, harum, voluptates quod odit sequi
-                earum excepturi sed minus, facere ullam nobis recusandae! Adipisci, quaerat. Odio, porro eos totam,
-                voluptatum, et iure fugiat quam dolorem vero voluptates doloremque. Quae et quidem repudiandae cumque
-                incidunt mollitia quo quisquam nobis tenetur voluptas pariatur, modi delectus quod non architecto
-                eveniet hic! Neque corrupti ex repellat est officia. Voluptates voluptatibus illo in aliquid neque,
-                repellendus voluptatum voluptas at facilis deserunt nemo tenetur itaque nam nulla quibusdam doloribus
-                praesentium nisi similique necessitatibus. Tempore aperiam, temporibus natus rerum officiis mollitia ad?
-                In maiores corporis repellendus facere. Vel dolores unde voluptate! Delectus reiciendis nostrum, ad quod
-                ipsum quas tenetur at odio, architecto, quia nesciunt dolorem officia nulla ipsa voluptatibus. Sunt nemo
-                et in rerum perferendis sed quidem officia magni fugiat doloribus hic quae enim, ipsam rem ratione
-                voluptates aspernatur tempora qui error repellendus, optio ut ducimus. Dignissimos facilis perspiciatis
-                natus, modi voluptas maiores animi ratione eius amet! Rerum illo voluptate iste repellat animi
-                repellendus voluptatum voluptates. Eos molestias itaque velit ipsa iure sit. Placeat temporibus laborum
-                architecto animi doloribus aliquam deserunt mollitia ut consequuntur. Odio modi eius expedita officiis
-                voluptate molestias facere maiores voluptatum ullam minima cumque possimus, nisi voluptatibus aut,
-                pariatur necessitatibus impedit repudiandae quaerat error? Soluta id, ipsam dolores maiores debitis
-                aliquam eaque impedit? Eaque atque quae suscipit laudantium! Vitae asperiores quaerat corporis magnam,
-                omnis perspiciatis nemo ut aperiam officiis minus ipsum nostrum rerum dignissimos voluptatum maxime?
-                Incidunt distinctio alias tempore in, aspernatur quas hic quod porro commodi vero esse consectetur!
-                Fugit consequuntur animi laudantium quod assumenda cupiditate eveniet error veritatis illum vitae, quasi
-                rerum quis suscipit, ratione architecto. Consequatur ex neque sunt reiciendis quibusdam, pariatur illum
-                excepturi aperiam facere? Dolor, porro blanditiis! Maxime aliquid culpa sit. Repellat ullam vero
-                similique quod maiores illo sint nobis odio esse adipisci fugiat sunt expedita quam ducimus, laborum,
-                nam hic soluta voluptatem sapiente dolores ipsam saepe praesentium eveniet! Dignissimos id qui corrupti
-                iusto aspernatur rerum, facere, soluta earum nostrum repellendus amet, delectus quaerat sequi
-                consequatur aliquid! Nesciunt, libero veniam sint fuga quam esse eligendi eius voluptatum illo est ea
-                laudantium quia tenetur qui perspiciatis consectetur aperiam? Dolorum tenetur odit nulla? Praesentium
-                voluptas libero rem cum quo perferendis similique velit, laborum cumque distinctio excepturi quas ipsa.
-                Minima, fugit! Impedit, culpa expedita. Sed, totam temporibus tenetur officia adipisci nobis dolorem
-                aliquid ad nostrum voluptatum eius pariatur molestias, eos atque cumque porro eum in similique? Tempore
-                temporibus fugiat cum a aliquid odio repudiandae magnam? Ipsam, maxime consectetur! Dignissimos, quae
-                veritatis sunt dolores, reiciendis consequatur officiis harum vitae mollitia veniam reprehenderit error
-                perferendis laudantium itaque hic eligendi quia accusantium fugit commodi optio numquam illum sapiente,
-                quo voluptatum. Sed quasi ab eligendi optio perspiciatis! Pariatur iste quae doloribus deserunt ipsa
-                aut, suscipit commodi labore quo sit ea possimus quaerat temporibus corrupti quas. Voluptatibus eaque
-                recusandae, est soluta animi minus laudantium inventore rerum saepe autem odit omnis quo id alias,
-                impedit et ab quam voluptatum enim libero quaerat rem? Dolor harum odio quisquam possimus quis officia
-                reiciendis ipsam perferendis ab debitis est assumenda voluptas suscipit qui rerum sed incidunt, sint eos
-                inventore magnam non laborum unde. Quos repellat, modi iusto officia tempore eos facere nostrum, maiores
-                odio repudiandae rem, sapiente numquam nam ab aut incidunt a inventore veniam. Consequatur sint possimus
-                placeat maiores in numquam aspernatur ab consequuntur ipsa autem, repellendus ipsum commodi. Beatae
-                mollitia sed molestias ut laboriosam culpa quia nostrum at quisquam ipsa quae numquam inventore deleniti
-                praesentium temporibus ratione necessitatibus, recusandae iste veritatis corrupti nam maiores. Obcaecati
-                tempore cum asperiores facere quia omnis fugit non labore reprehenderit nemo repellat consectetur,
-                maiores placeat facilis illum libero adipisci fuga ex architecto ad, laborum quis tempora ea magnam.
-                Reiciendis numquam enim eaque accusamus, vel dolore assumenda ipsam ut tempore, aliquid, tenetur vitae
-                sed in et quas excepturi adipisci placeat nobis aspernatur vero? Perferendis magnam saepe nam facere
-                repudiandae dolores ipsa accusamus veniam at illum voluptatibus dolorem totam officia excepturi quo
-                reiciendis natus sit, ullam rerum nesciunt qui quidem distinctio! Molestiae tempora iusto dolore dolores
-                sapiente esse officia nisi, labore quae accusantium nihil totam rem earum non qui odit sit ea nemo
-                asperiores blanditiis quis aliquid eveniet porro! Dolores ratione reprehenderit asperiores ad fugiat
-                provident ut maxime ullam quae! Quis delectus distinctio pariatur dicta non alias eos ducimus iste,
-                sapiente optio ipsam quibusdam similique sed sit quasi, omnis corrupti reprehenderit eligendi? Molestias
-                dignissimos explicabo vitae quia a atque nesciunt unde provident. Velit tempore earum ea consequatur.
-                Perferendis quod eos autem, fugit magnam maiores quo beatae aperiam rem quisquam itaque. Necessitatibus
-                iure incidunt officia. Officiis qui debitis at, ab eligendi dolor fugiat, quod magnam libero, quam
-                reiciendis veritatis!</p>
-        </main>
-        <aside class="flex flex-col justify-between bg-red-500 mt-4 mb-4 rounded-l-lg pl-6 sticky top-0">
-            <p>samping kanan</p>
-        </aside>
+<body class="bg-lightDark">
+    <div class="max-h-screen max-w-screen-2xl mx-auto overflow-hidden bg-lightDark">
+        {{-- sidebar --}}
+        <div class="flex justify-between gap-x-4 w-full h-screen">
+            <div class="flex flex-col">
+                <div class="h-4"></div>
+                <div class="bg-dark rounded-r-lg px-2 py-4 flex justify-between flex-col items-center flex-grow">
+                    <img src="{{ asset('assets/images/Logo.svg') }}" alt="logo" class="w-11">
+                    <div>
+                        <ul class="space-y-6">
+                            <div class="bg-superLightDark py-2 px-3 flex justify-center rounded-lg">
+                                <i class="ti ti-home text-xl text-center text-white"></i>
+                            </div>
+                            <div class="bg-superLightDark p-2 px-3 flex justify-center rounded-lg">
+                                <i class="ti ti-brand-wechat text-xl text-center text-white"></i>
+                            </div>
+                            <div class="bg-superLightDark p-2 px-3 flex justify-center rounded-lg">
+                                <i class="ti ti-users-group text-xl text-center text-white"></i>
+                            </div>
+                            {{-- <img src="{{ asset('assets/images/people.svg') }}" alt="logo" class="w-8"> --}}
+                        </ul>
+                    </div>
+                    <img src="{{ asset('assets/images/setting.svg') }}" alt="setting" class="w-8">
+                </div>
+                <div class="h-4"></div>
+            </div>
+            {{-- main --}}
+            <div class="flex flex-1 flex-col max-w-[67%]">
+                <div class="flex w-full gap-3 flex-row my-4 ">
+                    {{-- search --}}
+                    <input type="text" placeholder="Search Your Study Group Here"
+                        class="bg-transparent rounded-lg border-1 placeholder-white border-white py-2 px-4 w-full h-10">
+                    {{-- filter --}}
+                    <i
+                        class="ti ti-filter-search font-normal text-3xl text-center text-white h-auto w-10 justify-center bg-dark flex items-center rounded-lg"></i>
+                </div>
+                {{-- main content --}}
+                <div class="scrolled-text overflow-scroll">
+                    {{-- info content --}}
+                    <div class="bg-white rounded-3xl w-full h-52 my-4">
+
+                    </div>
+                    {{-- my projects --}}
+                    <div class="w-full">
+                        <p class="text-xl font-semibold text-white mb-4">Your Project Group</p>
+                        <div class="relative w-full">
+                            <div class="flex gap-8 overflow-x-auto pb-4 scrolled-text">
+                                <x-your-project-item>Mobile Developer With Kotlin</x-your-project-item>
+                                <x-your-project-item>Mobile Developer With Kotlin</x-your-project-item>
+                                <x-your-project-item>Mobile Developer With Kotlin</x-your-project-item>
+                                <x-your-project-item>Mobile Developer With Kotlin</x-your-project-item>
+                            </div>
+                        </div>
+                    </div>
+                    {{-- leaderboard this month --}}
+                    <div class="my-4">
+                        <p class="text-xl font-semibold text-white mb-4">Leaderboard</p>
+                        <div class="flex w-full py-5 px-3 rounded-3xl bg-dark">
+                            <div class="w-1/2 flex gap-1">
+                                {{-- card pm --}}
+                                <div
+                                    class="flex flex-col mt-20 h-fit gap-4 items-center bg-slate-400 rounded-3xl w-fit p-5">
+                                    <i class="ti ti-trophy-filled text-2xl text-center text-white"></i>
+                                    <div class="rounded-full bg-white w-8 h-8 flex-shrink-0"></div>
+                                    <p class="text-sm font-bold text-white">Fajar Sahab</p>
+                                    <p class="text-sm font-normal text-white">Project Manager</p>
+                                    <div class="flex gap-7">
+                                        <div class="flex flex-col items-center gap-2">
+                                            <p>Project</p>
+                                            <p>5</p>
+                                        </div>
+                                        <div class="flex flex-col items-center gap-2">
+                                            <p>Points</p>
+                                            <p>12</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col gap-4 h-fit items-center bg-slate-400 rounded-3xl w-fit p-5">
+                                    <i class="ti ti-trophy-filled text-2xl text-center text-white"></i>
+                                    <div class="rounded-full bg-white w-8 h-8 flex-shrink-0"></div>
+                                    <p class="text-sm font-bold text-white">Fajar Sahab</p>
+                                    <p class="text-sm font-normal text-white">Project Manager</p>
+                                    <div class="flex gap-7">
+                                        <div class="flex flex-col items-center gap-2">
+                                            <p>Project</p>
+                                            <p>5</p>
+                                        </div>
+                                        <div class="flex flex-col items-center gap-2">
+                                            <p>Points</p>
+                                            <p>12</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div
+                                    class="flex flex-col mt-32 h-fit gap-4 items-center bg-slate-400 rounded-3xl w-fit p-5">
+                                    <i class="ti ti-trophy-filled text-2xl text-center text-white"></i>
+                                    <div class="rounded-full bg-white w-8 h-8 flex-shrink-0"></div>
+                                    <p class="text-sm font-bold text-white">Fajar Sahab</p>
+                                    <p class="text-sm font-normal text-white">Project Manager</p>
+                                    <div class="flex gap-7">
+                                        <div class="flex flex-col items-center gap-2">
+                                            <p>Project</p>
+                                            <p>5</p>
+                                        </div>
+                                        <div class="flex flex-col items-center gap-2">
+                                            <p>Points</p>
+                                            <p>12</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="w-1/2 border-l-2 border-white px-3">
+                                <table class="w-full">
+                                    <thead>
+                                        <tr class="text-left text-sm font-bold text-lightDark2">
+                                            <th class="px-4 py-2">Place</th>
+                                            <th class="px-4 py-2">Name</th>
+                                            <th class="px-4 py-2">Role</th>
+                                            <th class="px-4 py-2">Project</th>
+                                            <th class="px-4 py-2">Points</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="text-left text-sm font-bold text-white">
+                                        <tr class="border-b-2 border-lightDark2">
+                                            <td class="px-4 py-2">4</td>
+                                            <td class="px-4 py-2">
+                                                <div class="flex items-center gap-2">
+                                                    <div class="rounded-full bg-white w-5 h-5 flex-shrink-0"></div>
+                                                    <p>John Doe</p>
+                                                </div>
+                                            </td>
+                                            <td class="px-4 py-2">Developer</td>
+                                            <td class="px-4 py-2">Web App</td>
+                                            <td class="px-4 py-2">100</td>
+                                        </tr>
+                                        <tr class="border-b-2 border-lightDark2">
+                                            <td class="px-4 py-2">5</td>
+                                            <td class="px-4 py-2">
+                                                <div class="flex items-center gap-2">
+                                                    <div class="rounded-full bg-white w-5 h-5 flex-shrink-0"></div>
+                                                    <p>Jane Smith</p>
+                                                </div>
+                                            </td>
+                                            <td class="px-4 py-2">Designer</td>
+                                            <td class="px-4 py-2">Mobile App</td>
+                                            <td class="px-4 py-2">95</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{-- profile bar --}}
+            <div class="flex flex-col max-w-[23%] h-screen">
+                <div class="h-4 flex flex-shrink-0"></div>
+                <div class="flex-grow bg-dark rounded-l-lg px-8 flex items-center justify-end flex-col">
+                    {{-- avatar --}}
+                    <div class="border-[5px] border-orange-500 rounded-full mt-3">
+                        <div class="w-20 h-20 bg-white rounded-full m-1 flex-shrink-0"></div>
+                    </div>
+                    {{-- name --}}
+                    <p class="text-2xl font-semibold text-white mb-6 mt-3">
+                        Fajar Sahab
+                    </p>
+                    {{-- social --}}
+                    <div class="flex gap-3 mb-4">
+                        <x-social-button>bell-minus-filled</x-social-button>
+                        <x-social-button>bookmark-filled</x-social-button>
+                        <x-social-button>user</x-social-button>
+                    </div>
+                    {{-- chart --}}
+                    <div class="mb-3">
+                        <div class="flex gap-3">
+                            <x-day-chart :colors="[['color' => 'bg-orange-500', 'weight' => 4]]">Sun</x-day-chart>
+                            <x-day-chart :colors="[
+                                ['color' => 'bg-orange-500', 'weight' => 4],
+                                ['color' => 'bg-white'],
+                                ['color' => 'bg-black'],
+                            ]">Mon</x-day-chart>
+                            <x-day-chart :colors="[
+                                ['color' => 'bg-white'],
+                                ['color' => 'bg-orange-500', 'weight' => 7],
+                                ['color' => 'bg-black'],
+                            ]">Tu</x-day-chart>
+                            <x-day-chart :colors="[
+                                ['color' => 'bg-orange-500'],
+                                ['color' => 'bg-black'],
+                                ['color' => 'bg-white', 'weight' => 3],
+                            ]">We</x-day-chart>
+                            <x-day-chart :colors="[['color' => 'bg-orange-500'], ['color' => 'bg-black'], ['color' => 'bg-white']]">Th</x-day-chart>
+                            <x-day-chart :colors="[
+                                ['color' => 'bg-orange-500', 'weight' => 2],
+                                ['color' => 'bg-black'],
+                                ['color' => 'bg-white'],
+                            ]">Fr</x-day-chart>
+                            <x-day-chart :colors="[
+                                ['color' => 'bg-purple-950', 'weight' => 6],
+                                ['color' => 'bg-black'],
+                                ['color' => 'bg-white'],
+                            ]">Sat</x-day-chart>
+                        </div>
+                        <div class="mt-3 justify-between flex">
+                            <x-tech-item tech="Kotlin" />
+                            <x-tech-item tech="Flutter" />
+                            <x-tech-item tech="Java" />
+                            <x-tech-item tech="JavaScript" />
+                        </div>
+                    </div>
+                    {{-- recommendation friends --}}
+                    <div class="my-9 w-full">
+                        <p class="text-sm font-bold text-white text-left">Make Your Friends</p>
+                    </div>
+                    <div class="overflow-y-auto flex-grow max-h-52 scrolled-text">
+                        <x-friends-rec-card>Fajar Sahab</x-friends-rec-card>
+                        <x-friends-rec-card>Muhammad Dhafa Ramadhani</x-friends-rec-card>
+                        <x-friends-rec-card>Ramadhan Abdul Aziz</x-friends-rec-card>
+                        <x-friends-rec-card>Ramadhan Abdul Aziz</x-friends-rec-card>
+                        <x-friends-rec-card>Ramadhan Abdul Aziz</x-friends-rec-card>
+                        <x-friends-rec-card>Ramadhan Abdul Aziz</x-friends-rec-card>
+                    </div>
+                </div>
+                <div class="h-4 flex flex-shrink-0"></div>
+            </div>
+        </div>
     </div>
 </body>
 
