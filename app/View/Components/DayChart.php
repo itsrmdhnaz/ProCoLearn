@@ -10,8 +10,9 @@ class DayChart extends Component
 {
     public $colors;
     public $totalBars = 12;
+    public $barWidth;
 
-    public function __construct($colors = [['color' => 'bg-orange-500']])
+    public function __construct($colors = [['color' => 'bg-orange-500']], $barWidth = "7" )
     {
         // Tambahkan weight default = 1 jika tidak ada
         $colors = array_map(function($item) {
@@ -22,6 +23,7 @@ class DayChart extends Component
         }, $colors);
 
         $this->colors = $this->calculateDistribution($colors);
+        $this->barWidth = $barWidth;
     }
 
     private function calculateDistribution($colors)
