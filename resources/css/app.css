@@ -1,3 +1,17 @@
+@import '../../node_modules/@tabler/icons-webfont/dist/tabler-icons.css';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.scrolled-text::-webkit-scrollbar {
+    display: none;
+}
+
+.scrolled-text {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+
+
+  
