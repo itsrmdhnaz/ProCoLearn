@@ -1,4 +1,4 @@
-<div class="hidden sm:flex flex-col flex-shrink-0">
+<div class="hidden sm:flex flex-col h-full flex-shrink-0">
     <div class="h-4"></div>
     <div class="bg-dark rounded-r-lg px-2 py-4 flex justify-between flex-col items-center flex-grow">
         <img src="{{ asset('assets/images/Logo.svg') }}" alt="logo" class="w-11 fill-slate-300">

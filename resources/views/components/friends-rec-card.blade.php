@@ -1,4 +1,4 @@
-<div class="mb-6 flex justify-between items-center w-full">
+<div class="mb-6 flex justify-between sm:gap-2 sm:justify-normal mdm:justify-between items-center w-full">
     <div class="flex items-center">
         <div class="rounded-full bg-white w-7 h-7 mr-4 flex-shrink-0"></div>
         <div>

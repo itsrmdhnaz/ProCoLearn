@@ -24,6 +24,7 @@ export default {
                 orangeCustom: '#FC7A56',
             },
             screens: {
+                'sss': '490px',
                 'mdm': '908px',
                 'xls': '1380px',
                 'xlm': '1495px'

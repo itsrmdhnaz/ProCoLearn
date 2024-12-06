@@ -1,4 +1,4 @@
-<div class="flex justify-between">
+<div class="sm:flex sm:justify-between hidden">
     <div class="flex mx-auto sm:mx-0 px-5 sm:gap-3">
         <p class="text-base font-semibold text-white sm:cursor-pointer">Chats</p>
         <p class="text-base font-semibold text-light2 sm:cursor-pointer">Contact</p>

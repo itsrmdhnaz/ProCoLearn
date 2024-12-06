@@ -2,7 +2,7 @@
     <div>
         @foreach($colors as $colorData)
             @for($i = 0; $i < $colorData['bars']; $i++)
-                <div class="w-{{ $barWidth }} h-2 {{ $colorData['color'] }}"></div>
+                <div class="w-7 sss:w-10 mdm:w-7 sm:w-12 h-2 {{ $colorData['color'] }}"></div>
             @endfor
         @endforeach
     </div>
