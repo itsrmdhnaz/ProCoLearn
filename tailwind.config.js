@@ -17,11 +17,14 @@ export default {
             colors:{
                 dark: '#40423F',
                 light: '#D9D9D9',
+                light2: '#7C7C7C',
                 lightDark: '#4E4E4E',
                 lightDark2: '#848484',
                 superLightDark: '#666865',
+                orangeCustom: '#FC7A56',
             },
             screens: {
+                'sss': '490px',
                 'mdm': '908px',
                 'xls': '1380px',
                 'xlm': '1495px'
