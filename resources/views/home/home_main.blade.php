@@ -17,7 +17,7 @@
         <i
             class="ti ti-filter-search font-normal text-3xl text-center text-white h-auto w-10 justify-center bg-dark hidden sm:flex items-center rounded-lg flex-shrink-0"></i>
         {{-- profile --}}
-        <div class="w-10 h-10 bg-white hidden sm:flex justify-center rounded-full flex-shrink-0 mdm:hidden">
+        <div class="w-10 h-10 bg-white hidden sm:flex justify-center rounded-full flex-shrink-0 mdm:hidden cursor-pointer" id="profile-button">
         </div>
         {{-- menu in mobile --}}
         <i id="overlay-menu-button"

@@ -25,7 +25,7 @@
                         <i class="ti ti-chevron-right text-2xl text-center text-light"></i>
                     </div>
                 </li>
-                <li>
+                <li id="profile-menu" class="cursor-pointer">
                     <div class="flex justify-between">
                         <p class="text-base font-semibold text-light">Profile</p>
                         <i class="ti ti-chevron-right text-2xl text-center text-light"></i>
