@@ -50,6 +50,7 @@
                 </button>
             </div>
         </div>
+        @include('home.profile_bar')
     </div>
 
     <script src="js/chat.js"></script>
