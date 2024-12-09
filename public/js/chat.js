@@ -12,6 +12,9 @@ const overlayMenuCloseMobile = document.getElementById(
 const profileBarClose = document.getElementById(
     "profile-bar-close-tablet"
 );
+const NewChatButton = document.getElementById("new-chat-button");
+const NewChatPage = document.getElementById("new-chat-page");
+const NewChatPageClose = document.getElementById("new-chat-page-close");
 
 overlayMenuButton.addEventListener("click", () => {
     setTimeout(() => {
@@ -260,4 +263,22 @@ profileBarClose.addEventListener("click", () => {
 });
 profileButton.addEventListener("click", () => {
     profileBar.classList.remove("hidden");
+});
+
+
+// new chat logic
+NewChatButton.addEventListener("click", () => {
+    NewChatPage.classList.remove("hidden");
+    NewChatPage.classList.add("flex");
+    requestAnimationFrame(() => {
+        NewChatPage.classList.remove("translate-y-full");
+    });
+});
+
+NewChatPageClose.addEventListener("click", () => {
+    NewChatPage.classList.add("translate-y-full");
+    setTimeout(() => {
+        NewChatPage.classList.remove("flex");
+        NewChatPage.classList.add("hidden");
+    }, 300);
 });

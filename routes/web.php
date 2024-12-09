@@ -21,5 +21,9 @@ Route::get('/chat', function () {
     return view('chat');
 });
 
+Route::get('/room-chat', function () {
+    return view('room_chat');
+});
+
 
 require __DIR__.'/auth.php';

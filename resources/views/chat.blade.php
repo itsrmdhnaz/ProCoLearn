@@ -37,7 +37,7 @@
             @include('chat.message')
             <div class="flex w-full py-7 bg-dark gap-10 px-10 sm:hidden">
                 <i class="ti ti-home-filled text-4xl text-white ml-10 flex-shrink-0" id="message-chat"></i>
-                <button class="flex gap-3 items-center bg-orangeCustom flex-1 justify-center rounded-full">
+                <button class="flex gap-3 items-center bg-orangeCustom flex-1 justify-center rounded-full" id="new-chat-button">
                     <i class="ti ti-plus text-xl text-white"></i>
                     <p class="text-xs font-semibold text-white">New Chat</p>
                 </button>
@@ -49,6 +49,8 @@
                     <p class="text-xs font-semibold text-white">New Chat</p>
                 </button>
             </div>
+
+            @include('chat.new_chat_page')
         </div>
         @include('home.profile_bar')
     </div>
