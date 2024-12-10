@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", function () {
         searchWrapper.classList.add(
             "flex-1",
             "rounded-full",
-            "border-white",
+            "border",
             "border-2",
             "py-2",
             "px-4",
@@ -171,7 +171,7 @@ document.addEventListener("DOMContentLoaded", function () {
         searchWrapperMessage.classList.add(
             "flex-1",
             "rounded-full",
-            "border-white",
+            "border",
             "border-2",
             "py-2",
             "px-4",
