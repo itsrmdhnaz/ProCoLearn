@@ -36,12 +36,16 @@
             </div>
             @include('chat.message')
             <div class="flex w-full py-7 bg-dark gap-10 px-10 sm:hidden">
-                <i class="ti ti-home-filled text-4xl text-white ml-10 flex-shrink-0" id="message-chat"></i>
-                <button class="flex gap-3 items-center bg-orangeCustom flex-1 justify-center rounded-full">
+                <button id="message-chat">
+                    <i class="ti ti-home-filled text-4xl text-white ml-10 flex-shrink-0"></i>
+                </button>
+                <button class="flex gap-3 items-center bg-orangeCustom flex-1 justify-center rounded-full" id="new-chat-button">
                     <i class="ti ti-plus text-xl text-white"></i>
                     <p class="text-xs font-semibold text-white">New Chat</p>
                 </button>
-                <i class="ti ti-user-filled text-4xl text-lightDark flex-shrink-0" id="contact-chat"></i>
+                <button id="contact-chat">
+                    <i class="ti ti-user-filled text-4xl text-lightDark flex-shrink-0"></i>
+                </button>
             </div>
             <div class="w-full justify-end hidden sm:flex">
                 <button class="flex gap-3 items-center bg-orangeCustom px-6 py-1 mt-4 mb-8 mr-7 rounded-md">
@@ -49,7 +53,10 @@
                     <p class="text-xs font-semibold text-white">New Chat</p>
                 </button>
             </div>
+
+            @include('chat.new_chat_page')
         </div>
+        @include('home.profile_bar')
     </div>
 
     <script src="js/chat.js"></script>
