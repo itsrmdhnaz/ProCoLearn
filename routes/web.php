@@ -25,5 +25,12 @@ Route::get('/room-chat', function () {
     return view('room_chat');
 });
 
+Route::get('/group-project', function () {
+    return view('group_project');
+});
+
+Route::get('/my-project', function () {
+    return view('my_project');
+});
 
 require __DIR__.'/auth.php';
