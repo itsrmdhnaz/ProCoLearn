@@ -5,6 +5,7 @@ namespace App\Models;
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
 
 use Illuminate\Database\Eloquent\Concerns\HasUlids;
+use Illuminate\Database\Eloquent\Concerns\HasUuids;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -13,7 +14,7 @@ use Illuminate\Notifications\Notifiable;
 class User extends Authenticatable
 {
     /** @use HasFactory<\Database\Factories\UserFactory> */
-    use HasFactory, Notifiable, HasUlids;
+    use HasFactory, Notifiable, HasUuids;
 
     protected $primaryKey = 'user_id';
     public $incrementing = false;
@@ -54,13 +55,4 @@ class User extends Authenticatable
         ];
     }
 
-    /**
-     * The chats that the user belongs to.
-     *
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
-     */
-    public function chats(): BelongsToMany
-    {
-        return $this->belongsToMany(Chat::class, 'chat_participants', 'user_id', 'chat_id')
-                    ->withTimestamps();
-    }}
+}
