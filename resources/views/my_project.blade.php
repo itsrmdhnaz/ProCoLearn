@@ -48,11 +48,9 @@
         <div class="w-full flex items-center justify-between gap-4 px-4 py-4">
             <!-- Dropdown -->
             <div class="relative">
-                <button class="flex items-center gap-2 bg-gray-800 text-white px-4 py-2 rounded-lg">
-                    <span>App Tukang bang..</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
-                    </svg>
+                <button class="flex items-center gap-2 border border-white text-white px-4 w-4/5 py-1 rounded-lg">
+                    <span class="text-ellipsis overflow-hidden whitespace-nowrap font-medium text-xs">App Tukang bangunan</span>
+                    <i class="ti ti-chevron-down text-2xl" ></i>
                 </button>
                 <!-- Dropdown menu (hidden by default) -->
                 <div class="hidden absolute left-0 mt-2 w-48 bg-gray-800 rounded-lg shadow-lg">
@@ -63,18 +61,14 @@
             <!-- Right Side -->
             <div class="flex items-center gap-4">
                 <!-- New Assignment Button -->
-                <button class="flex items-center gap-2 bg-coral-500 hover:bg-coral-600 text-white px-4 py-2 rounded-lg">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z" clip-rule="evenodd" />
-                    </svg>
+                <button class="flex items-center gap-2 bg-coral-500 hover:bg-coral-600 bg-orangeCustom text-white px-4 py-1 drop-shadow-xl rounded-lg">
+                    <i class="ti ti-plus text-2xl"></i>
                     <span>New Assignment</span>
                 </button>
 
                 <!-- Chat Icon -->
-                <button class="text-gray-400 hover:text-white">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-                    </svg>
+                <button class="">
+                    <i class="ti ti-messages text-3xl text-orangeCustom"></i>
                 </button>
             </div>
         </div>
