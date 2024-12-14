@@ -14,14 +14,16 @@
     {{-- menu mobile --}}
     @include('home.home_menu_mobile')
     {{-- screen --}}
-    <div class="max-h-screen max-w-screen-2xl mx-auto overflow-hidden bg-lightDark">
+    <div class="max-h-screen mx-auto overflow-hidden max-w-screen-2xl bg-lightDark">
         <div class="flex w-full h-screen">
             {{-- sidebar --}}
             <x-sidebar></x-sidebar>
+            <a href="{{ route("room-chat", $user) }}">uhuy</a>
             {{-- main --}}
             @include('home.home_main')
             {{-- profile bar --}}
             @include('home.profile_bar')
+
         </div>
     </div>
     <script src="js/home.js"></script>
