@@ -39,5 +39,12 @@ Route::get('/room-chat/{user:name}', function ($user) {
     return view('room_chat', compact('user'));
 })->name('room-chat');
 
+Route::get('/group-project', function () {
+    return view('group_project');
+});
+
+Route::get('/my-project', function () {
+    return view('my_project');
+});
 
 require __DIR__ . '/auth.php';
