@@ -49,8 +49,9 @@
             <!-- Dropdown -->
             <div class="relative">
                 <button class="flex items-center gap-2 border border-white text-white px-4 w-4/5 py-1 rounded-lg">
-                    <span class="text-ellipsis overflow-hidden whitespace-nowrap font-medium text-xs">App Tukang bangunan</span>
-                    <i class="ti ti-chevron-down text-2xl" ></i>
+                    <span class="text-ellipsis overflow-hidden whitespace-nowrap font-medium text-xs">App Tukang
+                        bangunan</span>
+                    <i class="ti ti-chevron-down text-2xl"></i>
                 </button>
                 <!-- Dropdown menu (hidden by default) -->
                 <div class="hidden absolute left-0 mt-2 w-48 bg-gray-800 rounded-lg shadow-lg">
@@ -61,7 +62,8 @@
             <!-- Right Side -->
             <div class="flex items-center gap-4">
                 <!-- New Assignment Button -->
-                <button class="flex items-center gap-2 bg-coral-500 hover:bg-coral-600 bg-orangeCustom text-white px-4 py-1 drop-shadow-xl rounded-lg">
+                <button
+                    class="flex items-center gap-2 bg-coral-500 hover:bg-coral-600 bg-orangeCustom text-white px-4 py-1 drop-shadow-xl rounded-lg">
                     <i class="ti ti-plus text-2xl"></i>
                     <span>New Assignment</span>
                 </button>
@@ -80,7 +82,14 @@
                 <!-- Card 1 -->
                 <div class="bg-dark rounded-3xl p-2">
                     <!-- Header dengan Logo Kotlin -->
-                    <div class="bg-lightDark rounded-t-3xl h-36 mb-2 overflow-hidden">
+                    <div class=" relative bg-lightDark rounded-t-3xl h-36 mb-2 overflow-hidden">
+                        <div
+                            class=" m-4 bg-purple-600 bg-opacity-70 drop-shadow-lg px-3 py-1 gap-2 absolute right-1 flex items-center rounded-full mb-4">
+                            <i class="ti ti-brand-figma text-2xl text-white"></i>
+                            <span class="text-white text-base font-semibold">
+                                UI / UX
+                            </span>
+                        </div>
                     </div>
 
                     <!-- Content -->
@@ -144,7 +153,14 @@
                 <!-- Card 2 -->
                 <div class="bg-dark rounded-3xl p-2">
                     <!-- Header dengan Logo Kotlin -->
-                    <div class="bg-lightDark rounded-t-3xl h-36 mb-2 overflow-hidden">
+                    <div class="relative bg-lightDark rounded-t-3xl h-36 mb-2 overflow-hidden">
+                        <div
+                            class=" m-4 bg-white bg-opacity-70 drop-shadow-lg px-3 py-1 gap-2 absolute right-1 flex items-center rounded-full mb-4">
+                            {{-- <i class="ti ti-brand-figma text-2xl text-white"></i> --}}
+                            <span class="text-black text-base font-semibold">
+                                All
+                            </span>
+                        </div>
                     </div>
 
                     <!-- Content -->
@@ -222,8 +238,8 @@
 
             <!-- Plus Button -->
             <button class="bg-orangeCustom p-4 rounded-2xl shadow-lg fixed right-10 bottom-24">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24"
-                    stroke="currentColor">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none"
+                    viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M12 4v16m8-8H4" />
                 </svg>
             </button>
