@@ -47,4 +47,16 @@ Route::get('/my-project', function () {
     return view('my_project');
 });
 
-require __DIR__ . '/auth.php';
+Route::get('/detail-project', function () {
+    return view('detail_project');
+});
+
+Route::get('/create-project', function () {
+    return view('create_project');
+});
+
+Route::get('/request-page', function () {
+    return view('request_page');
+});
+
+require __DIR__.'/auth.php';
