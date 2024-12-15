@@ -71,4 +71,8 @@ Route::get('/detail-task', function () {
     return view('detail_task');
 });
 
+Route::get('/leaderboad', function () {
+    return view('leaderboard');
+});
+
 require __DIR__.'/auth.php';
