@@ -13,7 +13,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('projects', function (Blueprint $table) {
-            $table->foreignUuid('owner_id')->constrained('users', 'user_id')->onDelete('cascade')->after('project_id');
+            $table->foreignUuid('created_by')->constrained('users', 'user_id')->onDelete('cascade')->after('project_id');
             $table->foreignUuid('approved_by')->nullable()->constrained('users', 'user_id')->after('owner_id');
             $table->string('name');
             $table->text('description');

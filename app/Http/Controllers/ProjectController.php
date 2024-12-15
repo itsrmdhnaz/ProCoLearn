@@ -9,6 +9,7 @@ use App\Models\Project;
 use App\Services\ProjectService;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Storage;
 
 class ProjectController extends Controller
 {
@@ -40,9 +41,10 @@ class ProjectController extends Controller
     public function store(ProjectRequest $request): RedirectResponse
     {
         DB::beginTransaction();
+        $data;
         try {
             $data = $request->validated();
-            $data['owner_id'] = auth()->id();
+            $data['created_by'] = auth()->id();
             $data['status'] = 'not_started';
             $data['image'] = $request->file('image')->store('projects');
             $data['roles'] = json_encode($data['roles']);
