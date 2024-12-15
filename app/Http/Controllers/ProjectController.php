@@ -2,11 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Helpers\Response;
 use App\Http\Requests\ProjectRequest;
 use App\Http\Requests\StoreProjectRequest;
 use App\Http\Requests\UpdateProjectRequest;
 use App\Models\Project;
 use App\Services\ProjectService;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
@@ -38,7 +40,7 @@ class ProjectController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(ProjectRequest $request): RedirectResponse
+    public function store(ProjectRequest $request): JsonResponse
     {
         DB::beginTransaction();
         try {
@@ -52,11 +54,11 @@ class ProjectController extends Controller
 
             DB::commit();
 
-            return redirect()->route('home')->with('success', 'Create Project Successfully');
+            return Response::success(null, "Created Project Successfully");
         } catch (\Exception $e) {
             DB::rollBack();
 
-            return redirect()->back()->withInput()->with('error', 'Something went wrong: ' . $e->getMessage());
+            return Response::errorCatch($e, 'Something went wrong: ' . $e->getMessage());
         }
     }
 

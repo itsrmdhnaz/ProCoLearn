@@ -13,5 +13,24 @@
     scrollbar-width: none;  /* Firefox */
   }
 
+  /* Tambahkan ini ke CSS Anda jika belum ada */
+@keyframes sk-wave {
+    0% { transform: scale(0); }
+    50% { transform: scale(1); }
+    100% { transform: scale(0); }
+}
+
+.sk-wave .sk-rect {
+    width: 20px;
+    height: 20px;
+    margin: 5px;
+    background-color: #fff;
+    animation: sk-wave 1.2s infinite ease-in-out;
+}
+
+.sk-wave .sk-rect:nth-child(2) { animation-delay: -0.4s; }
+.sk-wave .sk-rect:nth-child(3) { animation-delay: -0.8s; }
+
+
 
   /* scrollbar-thin scrollbar-thumb-gray-600 scrollbar-track-transparent */

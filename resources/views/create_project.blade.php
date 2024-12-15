@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project Form</title>
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
     <style>
         /* Hide scrollbar for all elements */
         * {
@@ -31,6 +30,8 @@
             display: none;
         }
     </style>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
 <body class="text-white bg-lightDark">
@@ -43,7 +44,7 @@
         </div>
 
         <!-- Form Content -->
-        <form class="flex-1 space-y-6" action="{{ route('project.store') }}" enctype="multipart/form-data" method="POST">
+        <form class="flex-1 space-y-6 default-form" action="{{ route('project.store') }}" enctype="multipart/form-data" method="POST">
             @csrf
             <!-- Project Name -->
             <div>
@@ -51,12 +52,10 @@
                     Project Name<span class="text-orangeCustom">*</span>
                 </label>
 
-                <input type="text" value="{{ old('name') }}" name="name"
+                <input type="text" name="name"
                     placeholder="Type your project name here..."
                     class="w-full p-3 text-white placeholder-gray-400 bg-transparent border border-white rounded-lg focus:outline-none">
-                @error('name')
-                    <div class="text-red-500">{{ $message }}</div>
-                @enderror
+                <div class="invalid-feedback"></div>
             </div>
 
             <!-- Project Description -->
@@ -66,9 +65,7 @@
                 </label>
                 <textarea name="description" placeholder="Type your project description here..."
                     class="w-full bg-transparent rounded-lg p-3 text-white placeholder-gray-400 border-white border focus:outline-none min-h-[100px]">{{ old('description') }}</textarea>
-                @error('description')
-                    <div class="text-red-500">{{ $message }}</div>
-                @enderror
+                <div class="invalid-feedback"></div>
             </div>
 
             <!-- Roles -->
@@ -90,13 +87,11 @@
                         </span>
                     </div>
 
-                    <input name="roles[]" type="text" value="{{ old('roles.0') }}"
+                    <input name="roles[]" type="text" value=""
                     placeholder="Fill in what resources are used in your project here..."
                     class="w-full p-3 text-white placeholder-gray-400 bg-transparent border border-white rounded-lg focus:outline-none">
-                    @error('roles')
-                        <div class="text-red-500">{{ $message }}</div>
-                    @enderror
-                    <button class="text-2xl text-orangeCustom"><i class="text-2xl text-white ti ti-plus"></i></button>
+                    <button type="button" class="text-2xl text-orangeCustom"><i class="text-2xl text-white ti ti-plus"></i></button>
+                    <div class="invalid-feedback"></div>
                 </div>
             </div>
 
@@ -105,14 +100,12 @@
                 <label class="block mb-2">
                     Resources<span class="text-orangeCustom">*</span>
                 </label>
-                <input name="resources" type="text" value="{{ old('resources') }}"
+                <input name="resources" type="text"
                     placeholder="Fill in what resources are used in your project here..."
                     class="w-full p-3 text-white placeholder-gray-400 bg-transparent border border-white rounded-lg focus:outline-none">
                 <p class="mt-1 text-xs text-end text-lightDark2">Use ',' to separate words, for example: flutter,
                     laravel</p>
-                @error('resource')
-                    <div class="text-red-500">{{ $message }}</div>
-                @enderror
+                <div class="invalid-feedback"></div>
             </div>
 
             <!-- Image Upload -->
@@ -124,9 +117,7 @@
                     </div>
                 </div>
                 <input type="file" name="image">
-                @error('image')
-                    <div class="text-red-500">{{ $message }}</div>
-                @enderror
+                <div class="invalid-feedback"></div>
             </div>
 
             <!-- Submit Button -->
@@ -135,6 +126,7 @@
             </button>
         </form>
     </div>
+    <script src="{{ url('js/content.js') }}"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <script>
