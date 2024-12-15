@@ -75,4 +75,12 @@ Route::get('/leaderboad', function () {
     return view('leaderboard');
 });
 
+Route::get('/profile-page', function () {
+    return view('profile_page');
+});
+
+Route::get('/welcome', function () {
+    return view('landing_page');
+});
+
 require __DIR__.'/auth.php';
