@@ -47,4 +47,32 @@ Route::get('/my-project', function () {
     return view('my_project');
 });
 
-require __DIR__ . '/auth.php';
+Route::get('/detail-project', function () {
+    return view('detail_project');
+});
+
+Route::get('/create-project', function () {
+    return view('create_project');
+});
+
+Route::get('/request-page', function () {
+    return view('request_page');
+});
+
+Route::get('/edit-my-project', function () {
+    return view('my_project.edit_my_project');
+});
+
+Route::get('/edit-contributor-project', function () {
+    return view('my_project.edit_contributor_project');
+});
+
+Route::get('/detail-task', function () {
+    return view('detail_task');
+});
+
+Route::get('/leaderboad', function () {
+    return view('leaderboard');
+});
+
+require __DIR__.'/auth.php';
