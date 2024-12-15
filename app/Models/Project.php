@@ -15,12 +15,4 @@ class Project extends Model
     protected $guarded = [''];
     public $incrementing = false;
     protected $keyType = 'string';
-
-    /**
-     * Relasi ke tabel chats.
-     */
-    public function chats()
-    {
-        return $this->hasMany(Chat::class, 'project_id', 'project_id');
-    }
 }
