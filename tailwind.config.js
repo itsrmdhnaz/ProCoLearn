@@ -24,6 +24,7 @@ export default {
                 orangeCustom: '#FC7A56',
                 lightOrange: '#FFA58C',
                 danger: '#E65757',
+                purpleCustom: '#432E54',
             },
             screens: {
                 'sss': '490px',

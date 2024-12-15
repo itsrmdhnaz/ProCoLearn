@@ -59,4 +59,16 @@ Route::get('/request-page', function () {
     return view('request_page');
 });
 
+Route::get('/edit-my-project', function () {
+    return view('my_project.edit_my_project');
+});
+
+Route::get('/edit-contributor-project', function () {
+    return view('my_project.edit_contributor_project');
+});
+
+Route::get('/detail-task', function () {
+    return view('detail_task');
+});
+
 require __DIR__.'/auth.php';

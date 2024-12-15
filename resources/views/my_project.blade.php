@@ -93,7 +93,7 @@
             </div>
         </div>
 
-        @include('content_my_project.main_content')
+        @include('my_project.main_content')
 
         <!-- Bottom Navigation -->
         <div class="bg-dark p-4 flex justify-around items-end">
