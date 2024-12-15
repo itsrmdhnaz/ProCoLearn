@@ -34,12 +34,12 @@ return new class extends Migration
     {
         Schema::table('projects', function (Blueprint $table) {
             // Drop foreign keys first
-            $table->dropForeign(['owner_id']);
+            $table->dropForeign(['created_by']);
             $table->dropForeign(['approved_by']);
 
             // Drop columns
             $table->dropColumn([
-                'owner_id',
+                'created_by',
                 'approved_by',
                 'name',
                 'description',

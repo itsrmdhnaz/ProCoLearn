@@ -41,7 +41,6 @@ class ProjectController extends Controller
     public function store(ProjectRequest $request): RedirectResponse
     {
         DB::beginTransaction();
-        $data;
         try {
             $data = $request->validated();
             $data['created_by'] = auth()->id();
