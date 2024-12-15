@@ -44,12 +44,13 @@
                     <i class="ti ti-dots text-2xl text-white"></i>
                 </button>
                 <!-- Dropdown Menu -->
-                <div class="hidden absolute right-0 mt-2 w-32 bg-dark rounded-lg shadow-lg py-2" id="dropdownMenu">
-                    <button class="w-full px-4 py-2 text-white hover:bg-lightDark2 text-left flex items-center gap-2">
+                <div class="hidden absolute right-0 mt-2 w-40 bg-dark rounded-lg shadow-lg py-2" id="dropdownMenu">
+                    <button class="w-full px-4 py-2 text-orangeCustom hover:bg-lightDark2 text-left flex items-center gap-2">
                         <i class="ti ti-edit"></i>
                         Edit
                     </button>
-                    <button class="w-full px-4 py-2 text-white hover:bg-lightDark2 text-left flex items-center gap-2">
+                    <hr class="border-lightDark">
+                    <button class="w-full px-4 py-2 text-orangeCustom hover:bg-lightDark2 text-left flex items-center gap-2">
                         <i class="ti ti-trash"></i>
                         Delete
                     </button>
