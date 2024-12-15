@@ -2,12 +2,25 @@
 
 namespace App\Http\Controllers;
 
+use App\Helpers\Response;
+use App\Http\Requests\ProjectRequest;
 use App\Http\Requests\StoreProjectRequest;
 use App\Http\Requests\UpdateProjectRequest;
 use App\Models\Project;
+use App\Services\ProjectService;
+use Illuminate\Http\JsonResponse;
+use Illuminate\Http\RedirectResponse;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Storage;
 
 class ProjectController extends Controller
 {
+    protected $projectService;
+
+    public function __construct(ProjectService $projectService)
+    {
+        $this->projectService = $projectService;
+    }
     /**
      * Display a listing of the resource.
      */
@@ -27,10 +40,28 @@ class ProjectController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreProjectRequest $request)
+    public function store(ProjectRequest $request): JsonResponse
     {
-        //
+        DB::beginTransaction();
+        try {
+            $data = $request->validated();
+            $data['created_by'] = auth()->id();
+            $data['status'] = 'not_started';
+            $data['image'] = $request->file('image')->store('projects');
+            $data['roles'] = json_encode($data['roles']);
+
+            $project = $this->projectService->create($data);
+
+            DB::commit();
+
+            return Response::success(null, "Created Project Successfully");
+        } catch (\Exception $e) {
+            DB::rollBack();
+
+            return Response::errorCatch($e, 'Something went wrong: ' . $e->getMessage());
+        }
     }
+
 
     /**
      * Display the specified resource.

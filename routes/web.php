@@ -3,6 +3,7 @@
 use App\Http\Controllers\ChatController;
 use App\Http\Controllers\MessageController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ProjectController;
 use App\Models\User;
 use Illuminate\Support\Facades\Route;
 
@@ -24,12 +25,14 @@ Route::middleware('auth')->group(function () {
         Route::get('/projects/{project_id}', [MessageController::class, 'getProjectMessages'])->name('messages.projects.get');
         Route::post('/projects/{project_id}', [MessageController::class, 'sendProjectMessage'])->name('messages.projects.send');
     });
+
+    Route::resource('project', ProjectController::class);
 });
 
 Route::get('/', function () {
     $user = User::whereNot('user_id', auth()->id())->first();
     return view('home', compact('user'));
-});
+})->name('home');
 
 Route::get('/chat', function () {
     return view('chat');
