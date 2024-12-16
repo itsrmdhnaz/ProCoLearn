@@ -44,7 +44,8 @@
         </div>
 
         <!-- Form Content -->
-        <form class="flex-1 space-y-6 default-form" action="{{ route('project.store') }}" enctype="multipart/form-data" method="POST">
+        <form class="flex-1 space-y-6 default-form" action="{{ route('project.store') }}" enctype="multipart/form-data"
+            method="POST">
             @csrf
             <!-- Project Name -->
             <div>
@@ -52,8 +53,7 @@
                     Project Name<span class="text-orangeCustom">*</span>
                 </label>
 
-                <input type="text" name="name"
-                    placeholder="Type your project name here..."
+                <input type="text" name="name" placeholder="Type your project name here..."
                     class="w-full p-3 text-white placeholder-gray-400 bg-transparent border border-white rounded-lg focus:outline-none">
                 <div class="invalid-feedback"></div>
             </div>
@@ -80,20 +80,28 @@
                             PMO
                         </span>
                     </div>
-                    <div class="flex items-center gap-2 px-3 py-1 bg-purple-600 rounded-full drop-shadow-lg">
-                        <i class="text-lg text-white ti ti-brand-figma"></i>
-                        <span class="text-xs font-medium text-white">
+                    <div class="bg-purple-600 relative drop-shadow-lg px-3 py-1 gap-2 flex items-center rounded-full">
+                        {{-- remove role --}}
+                        <i
+                            class="ti ti-x text-[10px] absolute -top-1 right-1 flex justify-center text-black bg-white rounded-sm px-[2px] py-[1.5px]"></i>
+                        {{-- role --}}
+                        <i class="ti ti-brand-figma text-lg text-white"></i>
+                        <span class="text-white text-xs font-medium">
                             UI / UX
                         </span>
                     </div>
+                    <button id="add-role-button" type="button" class="text-2xl text-orangeCustom"><i
+                            class="text-2xl text-white ti ti-plus"></i></button>
 
-                    <input name="roles[]" type="text" value=""
+                    {{-- <input name="roles[]" type="text" value=""
                     placeholder="Fill in what resources are used in your project here..."
                     class="w-full p-3 text-white placeholder-gray-400 bg-transparent border border-white rounded-lg focus:outline-none">
                     <button type="button" class="text-2xl text-orangeCustom"><i class="text-2xl text-white ti ti-plus"></i></button>
-                    <div class="invalid-feedback"></div>
+                    <div class="invalid-feedback"></div> --}}
                 </div>
             </div>
+
+            @include('my_project.modal_add_role')
 
             <!-- Resources -->
             <div>
@@ -108,16 +116,33 @@
                 <div class="invalid-feedback"></div>
             </div>
 
-            <!-- Image Upload -->
+            {{-- IMAGE --}}
             <div>
                 <label class="block mb-2">Image</label>
-                <div class="flex items-center justify-center p-8 border-2 border-dashed rounded-lg border-lightDark2">
-                    <div class="text-center">
+                <!-- Container Gambar dan Ikon -->
+                <div id="imageContainer"
+                    class="flex items-center justify-center p-8 border-2 border-dashed rounded-lg border-lightDark2 relative">
+                    <!-- Ikon Default -->
+                    <div id="iconPlaceholder" class="text-center absolute">
                         <i class="text-4xl ti ti-photo-plus text-lightDark2"></i>
                     </div>
+                    <!-- Gambar Preview -->
+                    <img id="imagePreview" src="#" alt="Image Preview"
+                        class="hidden w-full max-w-xs object-cover rounded-lg shadow-lg">
                 </div>
-                <input type="file" name="image">
-                <div class="invalid-feedback"></div>
+
+                <!-- Input File (Hanya Satu) -->
+                <input type="file" id="fileInput" class="hidden" accept="image/*"
+                    onchange="previewImage(event); showFileName(event);">
+
+                <!-- Tombol Kustom -->
+                <label for="fileInput"
+                    class="cursor-pointer bg-orange-500 hover:bg-orange-600 text-white px-4 py-1 rounded-lg shadow-md inline-block mt-2">
+                    Choose File
+                </label>
+
+                <!-- Nama File -->
+                <span id="fileName" class="ml-2 text-gray-400">No file chosen</span>
             </div>
 
             <!-- Submit Button -->
@@ -130,18 +155,58 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <script>
+        const addRoleButton = document.getElementById('add-role-button');
+        const modalAddRole = document.getElementById('modalAddRole');
+
+        const cancelBtn = document.getElementById('cancelAddRoleBtn');
+
+        addRoleButton.addEventListener('click', () => {
+            modalAddRole.classList.remove('hidden');
+            modalAddRole.classList.add('flex');
+        });
+
+        cancelBtn.addEventListener('click', () => {
+            modalAddRole.classList.add('hidden');
+        });
+
+        window.addEventListener('click', (e) => {
+            if (e.target === modalAddRole) {
+                modalAddRole.classList.add('hidden');
+            }
+        });
+
         function previewImage(event) {
             const file = event.target.files[0];
             const reader = new FileReader();
 
+            const preview = document.getElementById('imagePreview');
+            const iconPlaceholder = document.getElementById('iconPlaceholder');
+            const imageContainer = document.getElementById('imageContainer');
+
             reader.onload = function(e) {
-                const preview = document.getElementById('imagePreview');
                 preview.src = e.target.result;
-                preview.style.display = 'block'; // Show the preview image
+                preview.classList.remove('hidden');
+                iconPlaceholder.classList.add('hidden');
+
+                // Hapus border dan padding container
+                imageContainer.classList.remove('p-8', 'border-2', 'border-dashed', 'border-lightDark2');
+                imageContainer.classList.add('p-0');
             };
 
             if (file) {
                 reader.readAsDataURL(file);
+            }
+        }
+
+        function showFileName(event) {
+            const fileNameSpan = document.getElementById('fileName');
+            const file = event.target.files[0];
+
+            if (file) {
+                fileNameSpan.textContent = file.name;
+                fileNameSpan.style.color = 'white';
+            } else {
+                fileNameSpan.textContent = 'No file chosen'; // Default jika tidak ada file
             }
         }
     </script>

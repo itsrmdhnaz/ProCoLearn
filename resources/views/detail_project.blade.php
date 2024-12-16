@@ -17,7 +17,8 @@
                 <i class="ti ti-chevron-left text-2xl text-white"></i>
             </button>
             <div class="flex items-center gap-4">
-                <button class="bg-orangeCustom px-4 py-1 rounded-full flex shadow-shadowCustom items-center gap-2">
+                <button id="send-request-button"
+                    class="bg-orangeCustom px-4 py-1 rounded-full flex shadow-shadowCustom items-center gap-2">
                     <i class="ti ti-location-plus text-lg text-white"></i>
                     <p>
                         Send Request
@@ -28,6 +29,8 @@
                 </button>
             </div>
         </div>
+
+        @include('project.modal_send_project')
 
         <!-- Post Content -->
         <div class="flex-1">
@@ -74,13 +77,36 @@
                     <div class="w-10 h-10 bg-dark rounded-full"></div>
                     <span class="text-white">Ramadhan abdul</span>
                 </div>
-                <button class="border border-white bg-white px-4 py-1 rounded-xl flex items-center gap-2 shadow-shadowCustom">
+                <button
+                    class="border border-white bg-white px-4 py-1 rounded-xl flex items-center gap-2 shadow-shadowCustom">
                     <i class="ti ti-plus text-xl font-semibold text-orangeCustom"></i>
                     <p class="text-orangeCustom font-medium text-sm">Follow</p>
                 </button>
             </div>
         </div>
     </div>
+
+    <script>
+        const sendRequestButton = document.getElementById('send-request-button');
+        const modalSendRequest = document.getElementById('modalSendRequest');
+
+        const cancelBtn = document.getElementById('cancelSendRequestBtn');
+
+        sendRequestButton.addEventListener('click', () => {
+            modalSendRequest.classList.remove('hidden');
+            modalSendRequest.classList.add('flex');
+        });
+
+        cancelBtn.addEventListener('click', () => {
+            modalSendRequest.classList.add('hidden');
+        });
+
+        window.addEventListener('click', (e) => {
+            if (e.target === modalSendRequest) {
+                modalSendRequest.classList.add('hidden');
+            }
+        });
+    </script>
 </body>
 
 </html>

@@ -32,16 +32,18 @@
             <p class="text-sm font-normal text-white mb-6 flex justify-center ">
                 PMO, front end developer
             </p>
-            {{-- social --}}
-            <div class="flex gap-3 mb-6 justify-center">
-                <x-social-button>bell-minus-filled</x-social-button>
-                <x-social-button>bookmark-filled</x-social-button>
-                <x-social-button>user</x-social-button>
-            </div>
             <div class="w-full flex justify-center">
                 <button class="bg-orangeCustom px-4 py-1 rounded-lg">
                     <p class="text-white font-medium text-sm">Follow</p>
                 </button>
+                <div class="hidden">
+                    <button class="bg-transparent border-white border px-4 py-1 rounded-lg">
+                        <p class="text-white font-medium text-sm">Followed</p>
+                    </button>
+                    <button class="bg-orangeCustom px-4 py-1 rounded-lg">
+                        <p class="text-white font-medium text-sm">Messages</p>
+                    </button>
+                </div>
             </div>
 
             {{-- info project user --}}
@@ -52,7 +54,9 @@
                         <li>
                             <div class="flex justify-between items-center">
                                 <p class="text-white">Hitung Tabungan Android</p>
-                                <i class="ti ti-external-link text-2xl text-center text-orangeCustom"></i>
+                                <button>
+                                    <i class="ti ti-external-link text-2xl text-center text-orangeCustom"></i>
+                                </button>
                             </div>
                         </li>
                     @endfor
