@@ -22,12 +22,18 @@ export default {
                 lightDark2: '#848484',
                 superLightDark: '#666865',
                 orangeCustom: '#FC7A56',
+                lightOrange: '#FFA58C',
+                danger: '#E65757',
+                purpleCustom: '#432E54',
             },
             screens: {
                 'sss': '490px',
                 'mdm': '908px',
                 'xls': '1380px',
                 'xlm': '1495px'
+            },
+            boxShadow: {
+                'shadowCustom': '0 4px 8px rgba(0,0,0,0.4)',
             }
         },
     },

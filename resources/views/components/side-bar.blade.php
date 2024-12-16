@@ -1,20 +1,20 @@
-<div class="hidden sm:flex flex-col h-full flex-shrink-0">
+<div class="flex-col flex-shrink-0 hidden h-full sm:flex">
     <div class="h-4"></div>
-    <div class="bg-dark rounded-r-lg px-2 py-4 flex justify-between flex-col items-center flex-grow">
+    <div class="flex flex-col items-center justify-between flex-grow px-2 py-4 rounded-r-lg bg-dark">
         <img src="{{ asset('assets/images/Logo.svg') }}" alt="logo" class="w-11 fill-slate-300">
         <div>
             <ul class="space-y-6">
-                <div class="hover:bg-superLightDark py-2 px-3 flex justify-center rounded-lg">
-                    <i class="ti ti-home text-4xl text-center text-white"></i>
+                <div class="flex justify-center px-3 py-2 rounded-lg hover:bg-superLightDark">
+                    <i class="text-4xl text-center text-white ti ti-home"></i>
                 </div>
-                <div class="hover:bg-superLightDark p-2 px-3 flex justify-center rounded-lg">
-                    <i class="ti ti-brand-wechat text-4xl text-center text-white"></i>
+                <div class="flex justify-center p-2 px-3 rounded-lg hover:bg-superLightDark">
+                    <i class="text-4xl text-center text-white ti ti-brand-wechat"></i>
                 </div>
-                <div class="hover:bg-superLightDark p-2 px-3 flex justify-center rounded-lg">
-                    <i class="ti ti-brand-google-analytics text-4xl text-center text-white"></i>
+                <div class="flex justify-center p-2 px-3 rounded-lg hover:bg-superLightDark">
+                    <i class="text-4xl text-center text-white ti ti-brand-google-analytics"></i>
                 </div>
-                <div class="hover:bg-superLightDark p-2 px-3 flex justify-center rounded-lg">
-                    <i class="ti ti-users-group text-4xl text-center text-white"></i>
+                <div class="flex justify-center p-2 px-3 rounded-lg hover:bg-superLightDark">
+                    <i class="text-4xl text-center text-white ti ti-users-group"></i>
                 </div>
                 {{-- <img src="{{ asset('assets/images/people.svg') }}" alt="logo" class="w-8"> --}}
             </ul>

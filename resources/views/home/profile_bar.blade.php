@@ -2,8 +2,8 @@
     <div class="h-4 flex flex-shrink-0"></div>
     <div
         class="flex-grow sm:hidden mdm:flex bg-dark rounded-l-lg flex mdm:items-center justify-end flex-col fixed mdm:static inset-0 mdm:inset-auto w-full mdm:w-auto z-20 mdm:z-0 ">
-        <i
-            class="ti ti-chevron-left sm:hidden cursor-pointer text-3xl text-center text-white mt-6 flex justify-start mx-6 flex-shrink-0" id="overlay-menu-close-mobile"></i>
+        <i class="ti ti-chevron-left sm:hidden cursor-pointer text-3xl text-center text-white mt-6 flex justify-start mx-6 flex-shrink-0"
+            id="overlay-menu-close-mobile"></i>
         <i
             class="ti ti-x hidden cursor-pointer mdm:hidden text-3xl text-center text-white mt-6 sm:flex justify-end mx-6 flex-shrink-0"></i>
         <div class="flex-shrink-0 w-full">
@@ -87,8 +87,8 @@
             <div class="bg-dark h-full overflow-hidden flex flex-col rounded-l-lg">
                 {{-- <i
                     class="ti ti-chevron-left sm:hidden cursor-pointer text-3xl text-center text-white mt-6 flex justify-start mx-6 flex-shrink-0"></i> --}}
-                <i
-                    class="ti ti-x hidden cursor-pointer mdm:hidden text-3xl text-center text-white mt-6 sm:flex justify-end mx-6 flex-shrink-0" id="profile-bar-close-tablet"></i>
+                <i class="ti ti-x hidden cursor-pointer mdm:hidden text-3xl text-center text-white mt-6 sm:flex justify-end mx-6 flex-shrink-0"
+                    id="profile-bar-close-tablet"></i>
 
                 <!-- Profile section dengan flex-shrink-0 -->
                 <div class="flex-shrink-0 w-full h-fit">
