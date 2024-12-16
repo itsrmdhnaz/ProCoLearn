@@ -44,7 +44,7 @@
         </div>
 
         <!-- Form Content -->
-        <form class="flex-1 space-y-6 default-form" action="{{ route('project.store') }}" enctype="multipart/form-data"
+        <form class="flex-1 space-y-6 default-form" action="{{ route('project.store') }}" enctype="multipart/form-data" function-callback="afterCreateProject"
             method="POST">
             @csrf
             <!-- Project Name -->
@@ -141,7 +141,8 @@
             </div>
 
             <!-- Submit Button -->
-            <button onclick="openModalSelectRole()" type="button" class="w-full py-2 mt-6 text-white rounded-lg bg-orangeCustom shadow-shadowCustom">
+            <button onclick="openModalSelectRole()" type="button"
+                class="w-full py-2 mt-6 text-white rounded-lg bg-orangeCustom shadow-shadowCustom">
                 Next
             </button>
         </form>
@@ -169,6 +170,12 @@
                 modalAddRole.classList.add('hidden');
             }
         });
+
+        function afterCreateProject(response) {
+            history.replaceState(null, '', response.data.url);
+
+            window.location.href = response.data.url;
+        }
 
         function previewImage(event) {
             const file = event.target.files[0];
@@ -217,7 +224,7 @@
             selectedRole = role;
         }
 
-        function setSelectedRoleOwner(roleId){
+        function setSelectedRoleOwner(roleId) {
             $('#roleOwner').val(roleId)
         }
 
@@ -253,11 +260,11 @@
             // PMO wajib ada minimal 1
             if (roleName === "PMO" && roles[roleId] <= 1) {
                 showSweetAlert({
-                        title: "Info!",
-                        text: 'PMO wajib ada minimal 1.',
-                        icon: "info",
-                        showConfirmButton: true,
-                    });
+                    title: "Info!",
+                    text: 'PMO wajib ada minimal 1.',
+                    icon: "info",
+                    showConfirmButton: true,
+                });
                 return;
             }
 

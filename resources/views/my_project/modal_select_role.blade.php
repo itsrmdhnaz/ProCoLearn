@@ -8,7 +8,7 @@
         {{-- choose role --}}
         <div class="flex flex-wrap items-center justify-center gap-4 my-6">
             {{-- role --}}
-            @foreach ($roles->where("name", '!=', "PMO") as $role)
+            @foreach ($roles as $role)
                 <button type="button" onclick="setSelectedRoleOwner({{ $role->id }})"
                     class="flex items-center gap-2 px-3 py-1 transition-colors duration-200 rounded-full drop-shadow-lg focus:bg-transparent focus:outline-none focus:ring-2 focus:ring-gray-300 active:bg-transparent active:border active:border-gray-300"
                     style="background-color: {{ $role->colour_icon }};">
