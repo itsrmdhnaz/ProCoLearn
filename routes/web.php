@@ -71,11 +71,23 @@ Route::get('/edit-contributor-project', function () {
 });
 
 Route::get('/detail-task', function () {
-    return view('detail_task');
+    return view('task.detail_task');
+});
+
+Route::get('/edit-task', function () {
+    return view('task.edit_task');
 });
 
 Route::get('/leaderboad', function () {
     return view('leaderboard');
+});
+
+Route::get('/profile-page', function () {
+    return view('profile_page');
+});
+
+Route::get('/welcome', function () {
+    return view('landing_page');
 });
 
 require __DIR__.'/auth.php';

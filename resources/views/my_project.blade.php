@@ -68,54 +68,61 @@
             </div> --}}
 
             <!-- New Assignment Button -->
-            <button
+            <button id="new-assignment-button"
                 class="flex items-center gap-2 bg-coral-500 hover:bg-coral-600 bg-orangeCustom text-white px-4 py-1 drop-shadow-xl rounded-lg">
                 <i class="ti ti-plus text-2xl"></i>
                 <span>New Assignment</span>
             </button>
 
-            <!-- Right Side -->
-            <div class="flex items-center gap-4">
-
-                <!-- Setting Icon -->
-                <button class="">
-                    <i class="ti ti-settings-code text-3xl text-orangeCustom"></i>
-                </button>
-                <!-- Mail Icon -->
-                <button class="relative">
-                    <span class="absolute top-1 right-0 w-3 h-3 bg-[#38CA49] rounded-full"></span>
-                    <i class="ti ti-mail text-3xl text-orangeCustom"></i>
-                </button>
-                <!-- Chat Icon -->
-                <button class="">
-                    <i class="ti ti-messages text-3xl text-orangeCustom"></i>
-                </button>
-            </div>
+            {{-- modal new assignment --}}
+            @include('task.modal_new_task')
         </div>
 
-        @include('my_project.main_content')
 
-        <!-- Bottom Navigation -->
-        <div class="bg-dark p-4 flex justify-around items-end">
-            <button>
-                <i class="ti ti-world-code text-4xl text-white"></i>
-            </button>
-            <button>
-                <i class="ti ti-users-group text-3xl text-lightDark2"></i>
-            </button>
-            <button>
-                <i class="ti ti-world-star text-3xl text-lightDark2"></i>
-            </button>
+        <!-- Right Side -->
+        <div class="flex items-center gap-4">
 
-            <!-- Plus Button -->
-            <button class="bg-orangeCustom p-4 rounded-2xl shadow-lg fixed right-10 bottom-24">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24"
-                    stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M12 4v16m8-8H4" />
-                </svg>
+            <!-- Setting Icon -->
+            <button class="">
+                <i class="ti ti-settings-code text-3xl text-orangeCustom"></i>
+            </button>
+            <!-- Mail Icon -->
+            <button class="relative">
+                <span class="absolute top-1 right-0 w-3 h-3 bg-[#38CA49] rounded-full"></span>
+                <i class="ti ti-mail text-3xl text-orangeCustom"></i>
+            </button>
+            <!-- Chat Icon -->
+            <button class="">
+                <i class="ti ti-messages text-3xl text-orangeCustom"></i>
             </button>
         </div>
     </div>
+
+    @include('my_project.main_content')
+
+    <!-- Bottom Navigation -->
+    <div class="bg-dark p-4 flex justify-around items-end">
+        <button>
+            <i class="ti ti-world-code text-4xl text-white"></i>
+        </button>
+        <button>
+            <i class="ti ti-users-group text-3xl text-lightDark2"></i>
+        </button>
+        <button>
+            <i class="ti ti-world-star text-3xl text-lightDark2"></i>
+        </button>
+
+        <!-- Plus Button -->
+        <button class="bg-orangeCustom p-4 rounded-2xl shadow-lg fixed right-10 bottom-24">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M12 4v16m8-8H4" />
+            </svg>
+        </button>
+    </div>
+    </div>
+
+    <script src="js/my_project.js"></script>
 </body>
 
 </html>
