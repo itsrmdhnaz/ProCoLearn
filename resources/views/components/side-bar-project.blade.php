@@ -1,4 +1,4 @@
-<div class="sm:flex h-full bg-dark hidden">
+<div class="sm:flex h-screen bg-dark hidden">
     <!-- Sidebar -->
     <div class="h-full flex-shrink-0 flex flex-col">
         <div class="h-4"></div>
