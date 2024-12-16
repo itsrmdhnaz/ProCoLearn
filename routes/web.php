@@ -6,6 +6,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ProjectController;
 use App\Models\User;
 use Illuminate\Support\Facades\Route;
+use Spatie\Permission\Models\Role;
 
 // Route::get('/dashboard', function () {
 //     return view('dashboard');
@@ -55,7 +56,13 @@ Route::get('/detail-project', function () {
 });
 
 Route::get('/create-project', function () {
-    return view('create_project');
+
+    $roles = Role::where('status_scope', 'project')->get();
+    return view('create_project', compact('roles'));
+});
+
+Route::get('/start-project', function () {
+    return view('my_project.start_page');
 });
 
 Route::get('/request-page', function () {

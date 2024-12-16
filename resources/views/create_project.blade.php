@@ -74,21 +74,13 @@
                     Roles In This Project<span class="text-orangeCustom">*</span>
                 </label>
                 <div class="flex flex-wrap gap-2">
-                    <div class="flex items-center gap-2 px-3 py-1 rounded-full bg-orangeCustom drop-shadow-lg">
-                        <i class="text-lg text-white ti ti-flag"></i>
-                        <span class="text-xs font-medium text-white">
-                            PMO
-                        </span>
-                    </div>
-                    <div class="bg-purple-600 relative drop-shadow-lg px-3 py-1 gap-2 flex items-center rounded-full">
-                        {{-- remove role --}}
-                        <i
-                            class="ti ti-x text-[10px] absolute -top-1 right-1 flex justify-center text-black bg-white rounded-sm px-[2px] py-[1.5px]"></i>
-                        {{-- role --}}
-                        <i class="ti ti-brand-figma text-lg text-white"></i>
-                        <span class="text-white text-xs font-medium">
-                            UI / UX
-                        </span>
+                    <div class="flex flex-wrap gap-2" id="container-roles">
+                        <div class="flex items-center gap-2 px-3 py-1 rounded-full bg-orangeCustom drop-shadow-lg">
+                            <i class="text-lg text-white ti ti-flag"></i>
+                            <span class="text-xs font-medium text-white">
+                                PMO
+                            </span>
+                        </div>
                     </div>
                     <button id="add-role-button" type="button" class="text-2xl text-orangeCustom"><i
                             class="text-2xl text-white ti ti-plus"></i></button>
@@ -98,10 +90,13 @@
                     class="w-full p-3 text-white placeholder-gray-400 bg-transparent border border-white rounded-lg focus:outline-none">
                     <button type="button" class="text-2xl text-orangeCustom"><i class="text-2xl text-white ti ti-plus"></i></button>
                     <div class="invalid-feedback"></div> --}}
+                    <input type="hidden" name="roles" id="roles">
+                    <input type="hidden" name="roleOwner" id="roleOwner">
                 </div>
             </div>
 
             @include('my_project.modal_add_role')
+            @include('my_project.modal_select_role')
 
             <!-- Resources -->
             <div>
@@ -121,23 +116,23 @@
                 <label class="block mb-2">Image</label>
                 <!-- Container Gambar dan Ikon -->
                 <div id="imageContainer"
-                    class="flex items-center justify-center p-8 border-2 border-dashed rounded-lg border-lightDark2 relative">
+                    class="relative flex items-center justify-center p-8 border-2 border-dashed rounded-lg border-lightDark2">
                     <!-- Ikon Default -->
-                    <div id="iconPlaceholder" class="text-center absolute">
+                    <div id="iconPlaceholder" class="absolute text-center">
                         <i class="text-4xl ti ti-photo-plus text-lightDark2"></i>
                     </div>
                     <!-- Gambar Preview -->
                     <img id="imagePreview" src="#" alt="Image Preview"
-                        class="hidden w-full max-w-xs object-cover rounded-lg shadow-lg">
+                        class="hidden object-cover w-full max-w-xs rounded-lg shadow-lg">
                 </div>
 
                 <!-- Input File (Hanya Satu) -->
-                <input type="file" id="fileInput" class="hidden" accept="image/*"
+                <input type="file" id="fileInput" name="image" class="hidden" accept="image/*"
                     onchange="previewImage(event); showFileName(event);">
 
                 <!-- Tombol Kustom -->
                 <label for="fileInput"
-                    class="cursor-pointer bg-orange-500 hover:bg-orange-600 text-white px-4 py-1 rounded-lg shadow-md inline-block mt-2">
+                    class="inline-block px-4 py-1 mt-2 text-white bg-orange-500 rounded-lg shadow-md cursor-pointer hover:bg-orange-600">
                     Choose File
                 </label>
 
@@ -146,7 +141,7 @@
             </div>
 
             <!-- Submit Button -->
-            <button type="submit" class="w-full py-2 mt-6 text-white rounded-lg bg-orangeCustom shadow-shadowCustom">
+            <button onclick="openModalSelectRole()" type="button" class="w-full py-2 mt-6 text-white rounded-lg bg-orangeCustom shadow-shadowCustom">
                 Next
             </button>
         </form>
@@ -210,6 +205,133 @@
             }
         }
     </script>
+    <script>
+        let selectedRole = {};
+        let selectedRoleOwner = {}
+        let roles = {
+            "{{ $roles->where('name', 'PMO')->first()->id }}": 1
+        };
+        $('#roles').val(JSON.stringify(roles))
+
+        function setRole(role) {
+            selectedRole = role;
+        }
+
+        function setSelectedRoleOwner(roleId){
+            $('#roleOwner').val(roleId)
+        }
+
+        const modalSelectRole = document.getElementById('modalSelectRole');
+        const cancelSelectRoleBtn = document.getElementById('cancelSelectRoleBtn');
+
+        cancelSelectRoleBtn.addEventListener('click', () => {
+            modalSelectRole.classList.add('hidden');
+        });
+
+        function openModalSelectRole() {
+            modalSelectRole.classList.remove('hidden');
+            modalSelectRole.classList.add('flex');
+        }
+
+        function addRole() {
+            if (roles[selectedRole.id]) {
+                roles[selectedRole.id] += 1;
+                updateRole();
+                $('#roles').val(roles)
+                return;
+            }
+
+            roles[selectedRole.id] = 1;
+            updateRole();
+            $('#roles').val(JSON.stringify(roles))
+        }
+
+        function removeRole(element) {
+            const roleId = element.getAttribute('data-role-id');
+            const roleName = element.getAttribute('data-role-name');
+
+            // PMO wajib ada minimal 1
+            if (roleName === "PMO" && roles[roleId] <= 1) {
+                showSweetAlert({
+                        title: "Info!",
+                        text: 'PMO wajib ada minimal 1.',
+                        icon: "info",
+                        showConfirmButton: true,
+                    });
+                return;
+            }
+
+            if (roles[roleId]) {
+                roles[roleId] -= 1;
+
+                if (roles[roleId] === 0) {
+                    // Jika role count menjadi 0, hapus container
+                    delete roles[roleId];
+                    document.getElementById(`container-label-${roleId}`)?.remove();
+                } else {
+                    // Jika masih ada lebih dari 0, perbarui label counter
+                    updateRole(roleId);
+                }
+            }
+
+            $('#roles').val(roles)
+        }
+
+        function updateRole(roleId = selectedRole.id) {
+            modalAddRole.classList.remove('flex');
+            modalAddRole.classList.add('hidden');
+
+            const sum = roles[roleId] || 0;
+
+            // Update atau hapus counter jika jumlah role berubah
+            if (sum >= 1) {
+                const container = document.getElementById(`container-label-${roleId}`);
+                const counter = document.getElementById(`label-counter-${roleId}`);
+                if (sum === 1) {
+                    // Hapus label counter jika jumlah tinggal 1
+                    counter?.parentNode?.remove();
+                } else if (counter) {
+                    // Perbarui nilai counter jika lebih dari 1
+                    counter.innerText = `+${sum}`;
+                } else if (sum > 1) {
+                    // Tambahkan counter jika belum ada
+                    const labelCounter = `
+                        <div class="relative flex items-center gap-2 px-3 py-1 rounded-full drop-shadow-lg" style="background-color: ${selectedRole.colour_icon};">
+                            <span id="label-counter-${roleId}" class="text-xs font-medium text-white">
+                                +${sum}
+                            </span>
+                        </div>
+                    `;
+                    const container = document.getElementById(`container-label-${roleId}`);
+                    container?.insertAdjacentHTML('beforeend', labelCounter);
+                }
+            }
+
+            // Tambahkan label jika belum ada
+            if (!document.getElementById(`container-label-${roleId}`)) {
+                const roleData = selectedRole; // Data per role
+                const label = `
+                    <div class="flex gap-1" id="container-label-${roleId}">
+                        <div class="relative flex items-center gap-2 px-3 py-1 rounded-full drop-shadow-lg" style="background-color: ${roleData.colour_icon};">
+                            <!-- remove role -->
+                            <i class="ti ti-x text-[10px] absolute -top-1 right-1 flex justify-center text-black bg-white rounded-sm px-[2px] py-[1.5px]"
+                                onclick="removeRole(this)"
+                                data-role-id="${roleId}"
+                                data-role-name="${roleData.name}">
+                            </i>
+                            <!-- role -->
+                            <i class="text-lg text-white ${roleData.icon}"></i>
+                            <span class="text-xs font-medium text-white">
+                                ${roleData.name}
+                            </span>
+                        </div>
+                    </div>
+                `;
+                document.getElementById('container-roles').insertAdjacentHTML('beforeend', label);
+            }
+        }
+    </script>
+
     @if (session('error'))
         <script>
             const Toast = Swal.mixin({

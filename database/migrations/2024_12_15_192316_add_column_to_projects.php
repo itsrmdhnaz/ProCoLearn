@@ -17,7 +17,6 @@ return new class extends Migration
             $table->foreignUuid('approved_by')->nullable()->constrained('users', 'user_id')->after('owner_id');
             $table->string('name');
             $table->text('description');
-            $table->json('roles');
             $table->string('resources');
             $table->string('image');
             $table->enum('status', ['not_started', 'on_progress', 'on_revision', 'cancelled', 'finished']);
