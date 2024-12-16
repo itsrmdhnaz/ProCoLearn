@@ -20,3 +20,36 @@ window.addEventListener('click', (e) => {
         modal.classList.add('hidden');
     }
 });
+
+// Ambil semua dropdown buttons dengan class yang sama
+const dropdownButtons = document.querySelectorAll('[id^="dropdownButton"]'); // Pilih id yang diawali "dropdownButton"
+
+// Loop untuk menambahkan event listener ke setiap tombol dropdown
+dropdownButtons.forEach((button, index) => {
+    const iconButton = button.querySelector('i'); // Ambil elemen <i> di dalam tombol
+    const assignedTo = document.getElementById(`assignedTo${index}`);
+    const assignedToContainer = document.getElementById(`assignedToContainer${index}`);
+
+    button.addEventListener('click', () => {
+        // Cek apakah dropdown sedang terbuka
+        const isDropdownOpen = assignedToContainer.classList.contains('flex');
+
+        if (isDropdownOpen) {
+            // Tutup dropdown
+            assignedToContainer.classList.remove('flex');
+            assignedToContainer.classList.add('hidden');
+            assignedTo.classList.remove('hidden');
+            assignedTo.classList.add('flex');
+            iconButton.classList.remove('ti-chevron-up');
+            iconButton.classList.add('ti-chevron-down');
+        } else {
+            // Buka dropdown
+            assignedTo.classList.remove('flex');
+            assignedTo.classList.add('hidden');
+            assignedToContainer.classList.remove('hidden');
+            assignedToContainer.classList.add('flex');
+            iconButton.classList.remove('ti-chevron-down');
+            iconButton.classList.add('ti-chevron-up');
+        }
+    });
+});

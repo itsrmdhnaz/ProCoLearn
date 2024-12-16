@@ -6,20 +6,22 @@
         <!-- Assignee Role -->
         <div class="mb-4">
             <label class="text-gray-400 block mb-1">Assignee Role</label>
-            <select class="w-full p-2 rounded bg-transparent text-white">
+            <select class="w-full p-2 rounded bg-dark text-white">
                 <option>Choose role to assign</option>
                 <option>Manager</option>
                 <option>Developer</option>
+                <option>All</option>
             </select>
         </div>
 
         <!-- Assignee -->
         <div class="mb-4">
             <label class="text-gray-400 block mb-1">Assignee</label>
-            <select class="w-full p-2 rounded bg-transparent text-white">
+            <select class="w-full p-2 rounded bg-dark text-white">
                 <option>Choose people to assign</option>
                 <option>John Doe</option>
                 <option>Jane Smith</option>
+                <option>All</option>
             </select>
         </div>
 
