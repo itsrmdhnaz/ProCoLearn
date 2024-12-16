@@ -22,9 +22,10 @@ class ProjectRequest extends FormRequest
         return [
             'name' => 'required|string|max:255',
             'description' => 'required|string',
-            'roles' => 'required|array',
+            'roles' => 'required',
             'resources' => 'required|string',
             'image' => 'required',
+            'roleOwner' => 'required'
         ];
     }
 
@@ -39,7 +40,8 @@ class ProjectRequest extends FormRequest
             'description.string' => 'The project description must be a valid string.',
 
             'roles.required' => 'At least one role must be selected.',
-            'roles.array' => 'The roles must be provided as an array.',
+            'roleOwner.required' => 'At least one role must be selected.',
+            // 'roles.array' => 'The roles must be provided as an array.',
 
             'resources.required' => 'The resources field is required.',
             'resources.string' => 'The resources field must be a valid string.',

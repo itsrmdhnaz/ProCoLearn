@@ -7,6 +7,8 @@ use App\Http\Requests\ProjectRequest;
 use App\Http\Requests\StoreProjectRequest;
 use App\Http\Requests\UpdateProjectRequest;
 use App\Models\Project;
+use App\Models\ProjectContributtor;
+use App\Models\ProjectRole;
 use App\Services\ProjectService;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\RedirectResponse;
@@ -48,9 +50,24 @@ class ProjectController extends Controller
             $data['created_by'] = auth()->id();
             $data['status'] = 'not_started';
             $data['image'] = $request->file('image')->store('projects');
-            $data['roles'] = json_encode($data['roles']);
+
+            $roles = json_decode($data['roles'], true);
 
             $project = $this->projectService->create($data);
+
+            foreach($roles as $index => $value) {
+                ProjectRole::create([
+                    'project_id' => $project->project_id,
+                    'role_id' => $index,
+                    'number_of_people' => $value
+                ]);
+            }
+
+            ProjectContributtor::create([
+                'project_id' => $project->project_id,
+                'user_id' => auth()->id(),
+                'role_id' => $data['roleOwner'],
+            ]);
 
             DB::commit();
 
