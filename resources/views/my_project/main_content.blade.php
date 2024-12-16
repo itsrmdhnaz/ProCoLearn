@@ -4,7 +4,7 @@
         {{-- Perulangan Card --}}
         @for ($i = 0; $i < 5; $i++)
             {{-- card --}}
-            <div class="bg-dark rounded-3xl p-2">
+            <div class="bg-dark rounded-3xl p-2 max-w-md mx-auto">
                 <!-- Header dengan Logo Kotlin -->
                 <div class="relative bg-lightDark rounded-t-3xl h-36 mb-2 overflow-hidden">
                     <div
