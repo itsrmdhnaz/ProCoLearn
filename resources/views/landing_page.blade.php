@@ -33,7 +33,7 @@
         </div>
 
         <div class="overflow-y-auto scrolled-text">
-            <div class="relative max-w-3xl h-60 mx-4">
+            <div class="relative h-60 mx-4">
                 <!-- Gambar Latar Belakang -->
                 <img src="assets/images/kotlin.png" alt="illustration"
                     class="w-full h-full object-cover rounded-lg shadow-lg">
@@ -43,7 +43,7 @@
 
                 <!-- Teks di Atas Gambar -->
                 <div class="absolute inset-0 flex flex-col justify-center items-start p-6 text-white">
-                    <p class="text-lg mb-4">
+                    <p class="text-lg lg:text-3xl mb-4 lg:mb-8">
                         Every project is an opportunity to grow, learn, and collaborate.
                         At <strong>LMS Project Group</strong>, we believe that success is not just about completing
                         tasks,
@@ -56,18 +56,18 @@
                 </div>
             </div>
 
-            <div class="mt-6 bg-dark p-3 w-fit mx-auto rounded-2xl">
-                <i class="ti ti-report-analytics text-5xl text-center text-white"></i>
+            <div class="mt-6 lg:mt-10 bg-dark p-3 w-fit mx-auto rounded-2xl">
+                <i class="ti ti-report-analytics text-5xl lg:text-7xl text-center text-white"></i>
             </div>
 
-            <p class="text-white text-justify mt-6 px-4 text-xs font-medium">
+            <p class="text-white text-justify mt-6 lg:mt-10 px-4 text-xs font-medium lg:text-2xl">
                 Project Group is the leading solution for learning management and collaborative projects. Our
                 application is designed to make it easier for teams to share information, manage tasks, and collaborate
                 efficiently on one integrated platform. With the advanced features we offer, every team member can work
                 better together and achieve maximum results.
             </p>
 
-            <p class="text-white text-justify mt-6 px-4 text-xs font-semibold">
+            <p class="text-white text-justify mt-6 lg:mt-10 px-4 text-xs font-semibold lg:text-2xl">
                 Top Project Group
             </p>
 
@@ -100,35 +100,35 @@
                 @endfor
             </div>
 
-            <div class="mt-6 bg-dark p-3 w-fit mx-auto rounded-2xl">
-                <i class="ti ti-users-group text-5xl text-center text-white"></i>
+            <div class="mt-6 lg:mt-10 bg-dark p-3 w-fit mx-auto rounded-2xl">
+                <i class="ti ti-users-group text-5xl lg:text-7xl text-center text-white"></i>
             </div>
 
-            <p class="text-white text-justify mt-6 px-4 text-xs font-medium">
+            <p class="text-white text-justify mt-6 lg:mt-10 px-4 text-xs font-medium lg:text-2xl">
                 Want to know how professionals and top creators run their projects? At LMS Project Group, you can also
                 see and learn from top creators who have successfully managed various group projects. Get inspired by
                 how they build team collaboration, overcome challenges, and achieve success.
             </p>
 
-            <p class="text-white text-justify mt-6 px-4 text-xs font-semibold">
+            <p class="text-white text-justify mt-6 px-4 text-xs font-semibold lg:text-2xl">
                 Follow their journey, learn their strategies, and apply them to your own project success!
             </p>
 
-            <div class="w-0.5 mx-auto h-16 bg-light"></div>
+            <div class="w-0.5 mx-auto h-16 lg:h-28 mt-6 lg:mt-10 bg-light"></div>
 
-            <p class="text-white text-justify mt-6 px-4 text-xs font-semibold">
+            <p class="text-white text-justify mt-6 lg:mt-10 px-4 text-xs font-semibold lg:text-2xl">
                 Popular Creator Project Group
             </p>
 
             <div class="my-5 flex gap-8 mx-4 overflow-x-auto scrolled-text">
                 @for ($i = 0; $i < 3; $i++)
                     <div>
-                        <div class="w-32 h-44 bg-dark rounded-3xl">
+                        <div class="w-32 lg:w-72 lg:h-96 h-44 bg-dark rounded-3xl">
                             <img src="{{ asset('assets/images/kotlin.png') }}"
                                 class="w-full h-full object-cover rounded-3xl" alt="">
                         </div>
-                        <p class="mt-4 text-white text-xs font-semibold">Dhafa Ramadhani</p>
-                        <p class="text-white text-xs font-normal">Front-end</p>
+                        <p class="mt-4 text-white text-xs lg:text-xl font-semibold">Dhafa Ramadhani</p>
+                        <p class="text-white text-xs lg:text-xl font-normal">Front-end</p>
                     </div>
                 @endfor
             </div>
