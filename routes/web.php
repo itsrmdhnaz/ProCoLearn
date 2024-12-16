@@ -71,7 +71,11 @@ Route::get('/edit-contributor-project', function () {
 });
 
 Route::get('/detail-task', function () {
-    return view('detail_task');
+    return view('task.detail_task');
+});
+
+Route::get('/edit-task', function () {
+    return view('task.edit_task');
 });
 
 Route::get('/leaderboad', function () {
