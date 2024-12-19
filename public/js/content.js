@@ -62,6 +62,9 @@ function store_data(content, button) {
     let action = $(content).attr("action");
     let callback = $(content).attr("function-callback") ?? null;
 
+    console.log(callback)
+    console.log(typeof window[callback] === "function")
+
     $.ajax({
         url: action,
         type: "POST",

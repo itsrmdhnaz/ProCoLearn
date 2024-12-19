@@ -10,6 +10,7 @@ use App\Models\Project;
 use App\Models\ProjectContributtor;
 use App\Models\ProjectRole;
 use App\Services\ProjectService;
+use Exception;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\DB;
@@ -55,7 +56,7 @@ class ProjectController extends Controller
 
             $project = $this->projectService->create($data);
 
-            foreach($roles as $index => $value) {
+            foreach ($roles as $index => $value) {
                 ProjectRole::create([
                     'project_id' => $project->project_id,
                     'role_id' => $index,
@@ -71,7 +72,7 @@ class ProjectController extends Controller
 
             DB::commit();
 
-            return Response::success(null, "Created Project Successfully");
+            return Response::success(["url" => route("my_project", $project->project_id)], "Created Project Successfully");
         } catch (\Exception $e) {
             DB::rollBack();
 
@@ -110,5 +111,25 @@ class ProjectController extends Controller
     public function destroy(Project $project)
     {
         //
+    }
+
+    public function startProject(Project $project)
+    {
+        // dd($project);
+        DB::beginTransaction();
+
+        try {
+            $project = Project::find($project->project_id);
+            $project->update([
+                'status' => "on_progress"
+            ]);
+
+            DB::commit();
+            return Response::success(null, "Started Project Successfully");
+        } catch (Exception $e) {
+            DB::rollBack();
+
+            return Response::errorCatch($e, 'Something went wrong: ' . $e->getMessage());
+        }
     }
 }
